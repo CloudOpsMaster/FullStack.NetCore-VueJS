@@ -1,0 +1,11 @@
+E:\FuulStack\Inheritance\bin\Debug\netcoreapp2.1\Inheritance.deps.json
+E:\FuulStack\Inheritance\bin\Debug\netcoreapp2.1\Inheritance.runtimeconfig.json
+E:\FuulStack\Inheritance\bin\Debug\netcoreapp2.1\Inheritance.runtimeconfig.dev.json
+E:\FuulStack\Inheritance\bin\Debug\netcoreapp2.1\Inheritance.dll
+E:\FuulStack\Inheritance\bin\Debug\netcoreapp2.1\Inheritance.pdb
+E:\FuulStack\Inheritance\obj\Debug\netcoreapp2.1\Inheritance.csprojAssemblyReference.cache
+E:\FuulStack\Inheritance\obj\Debug\netcoreapp2.1\Inheritance.csproj.CoreCompileInputs.cache
+E:\FuulStack\Inheritance\obj\Debug\netcoreapp2.1\Inheritance.AssemblyInfoInputs.cache
+E:\FuulStack\Inheritance\obj\Debug\netcoreapp2.1\Inheritance.AssemblyInfo.cs
+E:\FuulStack\Inheritance\obj\Debug\netcoreapp2.1\Inheritance.dll
+E:\FuulStack\Inheritance\obj\Debug\netcoreapp2.1\Inheritance.pdb
