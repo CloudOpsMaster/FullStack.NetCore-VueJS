@@ -1,0 +1,11 @@
+C:\work\web Eng\ISD G\FullStrackNetVue\Abstraction\bin\Debug\netcoreapp3.0\Abstraction.exe
+C:\work\web Eng\ISD G\FullStrackNetVue\Abstraction\bin\Debug\netcoreapp3.0\Abstraction.deps.json
+C:\work\web Eng\ISD G\FullStrackNetVue\Abstraction\bin\Debug\netcoreapp3.0\Abstraction.runtimeconfig.json
+C:\work\web Eng\ISD G\FullStrackNetVue\Abstraction\bin\Debug\netcoreapp3.0\Abstraction.runtimeconfig.dev.json
+C:\work\web Eng\ISD G\FullStrackNetVue\Abstraction\bin\Debug\netcoreapp3.0\Abstraction.dll
+C:\work\web Eng\ISD G\FullStrackNetVue\Abstraction\bin\Debug\netcoreapp3.0\Abstraction.pdb
+C:\work\web Eng\ISD G\FullStrackNetVue\Abstraction\obj\Debug\netcoreapp3.0\Abstraction.csprojAssemblyReference.cache
+C:\work\web Eng\ISD G\FullStrackNetVue\Abstraction\obj\Debug\netcoreapp3.0\Abstraction.AssemblyInfoInputs.cache
+C:\work\web Eng\ISD G\FullStrackNetVue\Abstraction\obj\Debug\netcoreapp3.0\Abstraction.AssemblyInfo.cs
+C:\work\web Eng\ISD G\FullStrackNetVue\Abstraction\obj\Debug\netcoreapp3.0\Abstraction.dll
+C:\work\web Eng\ISD G\FullStrackNetVue\Abstraction\obj\Debug\netcoreapp3.0\Abstraction.pdb

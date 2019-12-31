@@ -58,7 +58,7 @@ namespace HWNetCore3
 
 
 
-            Console.ReadKey();
+           // Console.ReadKey();
         }
 
     }
