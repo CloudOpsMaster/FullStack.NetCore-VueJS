@@ -1,0 +1,11 @@
+C:\work\web Eng\ISD G\FullStrackNetVue\Statics\bin\Debug\netcoreapp3.0\Statics.exe
+C:\work\web Eng\ISD G\FullStrackNetVue\Statics\bin\Debug\netcoreapp3.0\Statics.deps.json
+C:\work\web Eng\ISD G\FullStrackNetVue\Statics\bin\Debug\netcoreapp3.0\Statics.runtimeconfig.json
+C:\work\web Eng\ISD G\FullStrackNetVue\Statics\bin\Debug\netcoreapp3.0\Statics.runtimeconfig.dev.json
+C:\work\web Eng\ISD G\FullStrackNetVue\Statics\bin\Debug\netcoreapp3.0\Statics.dll
+C:\work\web Eng\ISD G\FullStrackNetVue\Statics\bin\Debug\netcoreapp3.0\Statics.pdb
+C:\work\web Eng\ISD G\FullStrackNetVue\Statics\obj\Debug\netcoreapp3.0\Statics.csprojAssemblyReference.cache
+C:\work\web Eng\ISD G\FullStrackNetVue\Statics\obj\Debug\netcoreapp3.0\Statics.AssemblyInfoInputs.cache
+C:\work\web Eng\ISD G\FullStrackNetVue\Statics\obj\Debug\netcoreapp3.0\Statics.AssemblyInfo.cs
+C:\work\web Eng\ISD G\FullStrackNetVue\Statics\obj\Debug\netcoreapp3.0\Statics.dll
+C:\work\web Eng\ISD G\FullStrackNetVue\Statics\obj\Debug\netcoreapp3.0\Statics.pdb
