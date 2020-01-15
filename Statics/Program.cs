@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using static Calculator;
 using static Sort;
 
 namespace Statics
 {
-    
+
     class Program
     {
         static void Main(string[] args)
@@ -16,19 +17,33 @@ namespace Statics
             //Sort.SortArray();
 
             // Task 4 
-            int Substring(int a,int b)
+            void Substring(int beginIndex, int endIndex)
             {
-              return a + b;
+                string str = "My test string";
+              
+                List<char> newStr = new List<char>();
+                string temp = "";
+                for (int i = beginIndex; i < beginIndex + endIndex; i++)
+                {
+                    Console.WriteLine(str[i]);
+                 
+                   temp += str[i];
+                }
+                Console.WriteLine(temp);
             };
-            string IndexOf(string Str)
-            {
-            return Str;
-            } 
-            string Replace(string Str1, string Str2)
-            {
-              return Str1;
-            }
 
+            Substring(2, 5);
+
+            /*
+               string IndexOf(string Str)
+               {
+                   return Str;
+               }
+               string Replace(string Str1, string Str2)
+               {
+                   return Str1;
+               }
+              */
         }
     }
 }
