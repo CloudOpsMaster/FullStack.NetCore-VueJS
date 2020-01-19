@@ -17,7 +17,7 @@ namespace Statics
             //Sort.SortArray();
 
             // Task 4 
-            void Substring(int beginIndex, int endIndex)
+         /*   void Substring(int beginIndex, int endIndex)
             {
                 string str = "My test string";
               
@@ -33,17 +33,39 @@ namespace Statics
             };
 
             Substring(2, 5);
-
+           */
             /*
-               string IndexOf(string Str)
+               void IndexOf(string Str)
                {
-                   return Str;
+                   Str = "IndexOf";
+                   char input = 'd';
+                   for (int i = 0; i < Str.Length; i++ )
+                   {
+                       if (input == Str[i])
+                       {
+                         Console.WriteLine(i);
+                       }
+                     
+                   }
                }
-               string Replace(string Str1, string Str2)
+
+               IndexOf("IndexOf");
+             */
+               
+               void Replace(string oldString, string newString)
                {
-                   return Str1;
+                   if (oldString != newString)
+                   {
+                       oldString = newString;
+                       Console.WriteLine(newString);
+                   } else  {
+                        Console.WriteLine(oldString);
+                   }
+                  
                }
-              */
+
+               Replace("abra kadabra", "it is new abra kadabra");
+              
         }
     }
 }
