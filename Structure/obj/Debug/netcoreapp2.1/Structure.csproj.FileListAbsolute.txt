@@ -1,0 +1,11 @@
+H:\FuulStack\Structure\bin\Debug\netcoreapp2.1\Structure.deps.json
+H:\FuulStack\Structure\bin\Debug\netcoreapp2.1\Structure.runtimeconfig.json
+H:\FuulStack\Structure\bin\Debug\netcoreapp2.1\Structure.runtimeconfig.dev.json
+H:\FuulStack\Structure\bin\Debug\netcoreapp2.1\Structure.dll
+H:\FuulStack\Structure\bin\Debug\netcoreapp2.1\Structure.pdb
+H:\FuulStack\Structure\obj\Debug\netcoreapp2.1\Structure.csprojAssemblyReference.cache
+H:\FuulStack\Structure\obj\Debug\netcoreapp2.1\Structure.csproj.CoreCompileInputs.cache
+H:\FuulStack\Structure\obj\Debug\netcoreapp2.1\Structure.AssemblyInfoInputs.cache
+H:\FuulStack\Structure\obj\Debug\netcoreapp2.1\Structure.AssemblyInfo.cs
+H:\FuulStack\Structure\obj\Debug\netcoreapp2.1\Structure.dll
+H:\FuulStack\Structure\obj\Debug\netcoreapp2.1\Structure.pdb
