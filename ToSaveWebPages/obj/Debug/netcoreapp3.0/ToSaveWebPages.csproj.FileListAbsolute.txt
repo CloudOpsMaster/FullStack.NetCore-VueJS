@@ -1,0 +1,11 @@
+C:\work\web Eng\ISD G\FullStrackNetVue\ToSaveWebPages\bin\Debug\netcoreapp3.0\ToSaveWebPages.exe
+C:\work\web Eng\ISD G\FullStrackNetVue\ToSaveWebPages\bin\Debug\netcoreapp3.0\ToSaveWebPages.deps.json
+C:\work\web Eng\ISD G\FullStrackNetVue\ToSaveWebPages\bin\Debug\netcoreapp3.0\ToSaveWebPages.runtimeconfig.json
+C:\work\web Eng\ISD G\FullStrackNetVue\ToSaveWebPages\bin\Debug\netcoreapp3.0\ToSaveWebPages.runtimeconfig.dev.json
+C:\work\web Eng\ISD G\FullStrackNetVue\ToSaveWebPages\bin\Debug\netcoreapp3.0\ToSaveWebPages.dll
+C:\work\web Eng\ISD G\FullStrackNetVue\ToSaveWebPages\bin\Debug\netcoreapp3.0\ToSaveWebPages.pdb
+C:\work\web Eng\ISD G\FullStrackNetVue\ToSaveWebPages\obj\Debug\netcoreapp3.0\ToSaveWebPages.csprojAssemblyReference.cache
+C:\work\web Eng\ISD G\FullStrackNetVue\ToSaveWebPages\obj\Debug\netcoreapp3.0\ToSaveWebPages.AssemblyInfoInputs.cache
+C:\work\web Eng\ISD G\FullStrackNetVue\ToSaveWebPages\obj\Debug\netcoreapp3.0\ToSaveWebPages.AssemblyInfo.cs
+C:\work\web Eng\ISD G\FullStrackNetVue\ToSaveWebPages\obj\Debug\netcoreapp3.0\ToSaveWebPages.dll
+C:\work\web Eng\ISD G\FullStrackNetVue\ToSaveWebPages\obj\Debug\netcoreapp3.0\ToSaveWebPages.pdb
