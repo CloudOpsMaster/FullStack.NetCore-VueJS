@@ -1,0 +1,11 @@
+C:\work\web Eng\ISD G\FullStrackNetVue\webServer\bin\Debug\netcoreapp3.0\webServer.exe
+C:\work\web Eng\ISD G\FullStrackNetVue\webServer\bin\Debug\netcoreapp3.0\webServer.deps.json
+C:\work\web Eng\ISD G\FullStrackNetVue\webServer\bin\Debug\netcoreapp3.0\webServer.runtimeconfig.json
+C:\work\web Eng\ISD G\FullStrackNetVue\webServer\bin\Debug\netcoreapp3.0\webServer.runtimeconfig.dev.json
+C:\work\web Eng\ISD G\FullStrackNetVue\webServer\bin\Debug\netcoreapp3.0\webServer.dll
+C:\work\web Eng\ISD G\FullStrackNetVue\webServer\bin\Debug\netcoreapp3.0\webServer.pdb
+C:\work\web Eng\ISD G\FullStrackNetVue\webServer\obj\Debug\netcoreapp3.0\webServer.csprojAssemblyReference.cache
+C:\work\web Eng\ISD G\FullStrackNetVue\webServer\obj\Debug\netcoreapp3.0\webServer.AssemblyInfoInputs.cache
+C:\work\web Eng\ISD G\FullStrackNetVue\webServer\obj\Debug\netcoreapp3.0\webServer.AssemblyInfo.cs
+C:\work\web Eng\ISD G\FullStrackNetVue\webServer\obj\Debug\netcoreapp3.0\webServer.dll
+C:\work\web Eng\ISD G\FullStrackNetVue\webServer\obj\Debug\netcoreapp3.0\webServer.pdb
