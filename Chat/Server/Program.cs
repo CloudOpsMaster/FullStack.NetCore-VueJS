@@ -3,112 +3,75 @@ using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
-
+using System.Threading;
 
 namespace Server
 {
     class Program
-    {    
-        private static readonly Socket serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-        private static readonly List<Socket> clientSockets = new List<Socket>();
-        private const int BUFFER_SIZE = 2048;
-        private const int PORT = 100;
-        private static readonly byte[] buffer = new byte[BUFFER_SIZE];
+{
+    static readonly object _lock = new object();
+    static readonly Dictionary<int, TcpClient> list_clients = new Dictionary<int, TcpClient>();
 
+    static void Main(string[] args)
+    {
+        int count = 1;
 
-        static void Main(string[] args)
+        TcpListener ServerSocket = new TcpListener(IPAddress.Any, 5000);
+        ServerSocket.Start();
+
+        while (true)
         {
-            Console.Title = "Server";
-            SetupServer();
-            Console.ReadLine(); 
-            CloseAllSockets();
-        }
+            TcpClient client = ServerSocket.AcceptTcpClient();
+            lock (_lock) list_clients.Add(count, client);
+            Console.WriteLine("Someone connected!!");
 
-         private static void SetupServer()
-        {
-            Console.WriteLine("Setting up server...");
-            serverSocket.Bind(new IPEndPoint(IPAddress.Any, PORT));
-            serverSocket.Listen(0);
-            serverSocket.BeginAccept(AcceptCallback, null);
-            Console.WriteLine("Server setup complete");
-        }
-
-        private static void CloseAllSockets()
-        {
-            foreach (Socket socket in clientSockets)
-            {
-                socket.Shutdown(SocketShutdown.Both);
-                socket.Close();
-            }
-
-            serverSocket.Close();
-        }
-
-        private static void AcceptCallback(IAsyncResult AR)
-        {
-            Socket socket;
-
-            try
-            {
-                socket = serverSocket.EndAccept(AR);
-            }
-            catch (ObjectDisposedException) 
-            {
-                return;
-            }
-
-           clientSockets.Add(socket);
-           socket.BeginReceive(buffer, 0, BUFFER_SIZE, SocketFlags.None, ReceiveCallback, socket);
-           Console.WriteLine("Client connected, waiting for request...");
-           serverSocket.BeginAccept(AcceptCallback, null);
-        }
-
-        private static void ReceiveCallback(IAsyncResult AR)
-        {
-            Socket current = (Socket)AR.AsyncState;
-            int received;
-
-            try
-            {
-                received = current.EndReceive(AR);
-            }
-            catch (SocketException)
-            {
-                Console.WriteLine("Client forcefully disconnected");
-                current.Close(); 
-                clientSockets.Remove(current);
-                return;
-            }
-
-            byte[] recBuf = new byte[received];
-            Array.Copy(buffer, recBuf, received);
-            string text = Encoding.ASCII.GetString(recBuf);
-            Console.WriteLine("Received Text: " + text);
-
-            if (text.ToLower() == "get time") 
-            {
-                Console.WriteLine("Text is a get time request");
-                byte[] data = Encoding.ASCII.GetBytes(DateTime.Now.ToLongTimeString());
-                current.Send(data);
-                Console.WriteLine("Time sent to client");
-            }
-            else if (text.ToLower() == "exit") 
-            {
-                current.Shutdown(SocketShutdown.Both);
-                current.Close();
-                clientSockets.Remove(current);
-                Console.WriteLine("Client disconnected");
-                return;
-            }
-            else
-            {
-                Console.WriteLine("Text is an invalid request");
-                byte[] data = Encoding.ASCII.GetBytes("Invalid request");
-                current.Send(data);
-                Console.WriteLine("Warning Sent");
-            }
-
-            current.BeginReceive(buffer, 0, BUFFER_SIZE, SocketFlags.None, ReceiveCallback, current);
+            Thread t = new Thread(handle_clients);
+            t.Start(count);
+            count++;
         }
     }
+
+    public static void handle_clients(object o)
+    {
+        int id = (int)o;
+        TcpClient client;
+
+        lock (_lock) client = list_clients[id];
+
+        while (true)
+        {
+            NetworkStream stream = client.GetStream();
+            byte[] buffer = new byte[1024];
+            int byte_count = stream.Read(buffer, 0, buffer.Length);
+
+            if (byte_count == 0)
+            {
+                break;
+            }
+
+            string data = Encoding.ASCII.GetString(buffer, 0, byte_count);
+            broadcast(data);
+            Console.WriteLine(data);
+        }
+
+        lock (_lock) list_clients.Remove(id);
+        client.Client.Shutdown(SocketShutdown.Both);
+        client.Close();
+    }
+
+    public static void broadcast(string data)
+    {
+        byte[] buffer = Encoding.ASCII.GetBytes(data + Environment.NewLine);
+
+        lock (_lock)
+        {
+            foreach (TcpClient c in list_clients.Values)
+            {
+                NetworkStream stream = c.GetStream();
+
+                stream.Write(buffer, 0, buffer.Length);
+            }
+        }
+    }
+}
 }

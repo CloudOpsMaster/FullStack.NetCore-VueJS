@@ -2,92 +2,49 @@
 using System.Net.Sockets;
 using System.Net;
 using System.Text;
+using System.Threading;
 
 namespace Client
 {
-    class Program
+   class Program
+{
+    static void Main(string[] args)
     {
-        private static readonly Socket ClientSocket = new Socket
-        (AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-        private const int PORT = 100;
+        IPAddress ip = IPAddress.Parse("127.0.0.1");
+        int port = 5000;
+        TcpClient client = new TcpClient();
+        client.Connect(ip, port);
+        Console.WriteLine("client connected!!");
+        NetworkStream ns = client.GetStream();
+        Thread thread = new Thread(o => ReceiveData((TcpClient)o));
 
+        thread.Start(client);
 
-        static void Main(string[] args)
+        string s;
+        while (!string.IsNullOrEmpty((s = Console.ReadLine())))
         {
-            Console.Title = "Client";
-            ConnectToServer();
-            RequestLoop();
-            Exit();
+            byte[] buffer = Encoding.ASCII.GetBytes(s);
+            ns.Write(buffer, 0, buffer.Length);
         }
 
-       private static void ConnectToServer()
+        client.Client.Shutdown(SocketShutdown.Send);
+        thread.Join();
+        ns.Close();
+        client.Close();
+        Console.WriteLine("disconnect from server!!");
+        Console.ReadKey();
+    }
+
+    static void ReceiveData(TcpClient client)
+    {
+        NetworkStream ns = client.GetStream();
+        byte[] receivedBytes = new byte[1024];
+        int byte_count;
+
+        while ((byte_count = ns.Read(receivedBytes, 0, receivedBytes.Length)) > 0)
         {
-            int attempts = 0;
-
-            while (!ClientSocket.Connected)
-            {
-                try
-                {
-                    attempts++;
-                    Console.WriteLine("Connection attempt " + attempts);
-                    ClientSocket.Connect(IPAddress.Loopback, PORT);
-                }
-                catch (SocketException) 
-                {
-                    Console.Clear();
-                }
-            }
-
-            Console.Clear();
-            Console.WriteLine("Connected");
-        }
-
-        private static void RequestLoop()
-        {
-            Console.WriteLine(@"<Type ""exit"" to properly disconnect client>");
-
-            while (true)
-            {
-                SendRequest();
-                ReceiveResponse();
-            }
-        }
-
-        private static void Exit()
-        {
-            SendString("exit"); 
-            ClientSocket.Shutdown(SocketShutdown.Both);
-            ClientSocket.Close();
-            Environment.Exit(0);
-        }
-
-        private static void SendRequest()
-        {
-            Console.Write("Send a request: ");
-            string request = Console.ReadLine();
-            SendString(request);
-
-            if (request.ToLower() == "exit")
-            {
-                Exit();
-            }
-        }
-
-        private static void SendString(string text)
-        {
-            byte[] buffer = Encoding.ASCII.GetBytes(text);
-            ClientSocket.Send(buffer, 0, buffer.Length, SocketFlags.None);
-        }
-
-        private static void ReceiveResponse()
-        {
-            var buffer = new byte[2048];
-            int received = ClientSocket.Receive(buffer, SocketFlags.None);
-            if (received == 0) return;
-            var data = new byte[received];
-            Array.Copy(buffer, data, received);
-            string text = Encoding.ASCII.GetString(data);
-            Console.WriteLine(text);
+            Console.Write(Encoding.ASCII.GetString(receivedBytes, 0, byte_count));
         }
     }
+}
 }
