@@ -1,0 +1,11 @@
+C:\work\web Eng\ISD G\FullStrackNetVue\asynchronousVSsynchronous\bin\Debug\netcoreapp3.0\asynchronousVSsynchronous.exe
+C:\work\web Eng\ISD G\FullStrackNetVue\asynchronousVSsynchronous\bin\Debug\netcoreapp3.0\asynchronousVSsynchronous.deps.json
+C:\work\web Eng\ISD G\FullStrackNetVue\asynchronousVSsynchronous\bin\Debug\netcoreapp3.0\asynchronousVSsynchronous.runtimeconfig.json
+C:\work\web Eng\ISD G\FullStrackNetVue\asynchronousVSsynchronous\bin\Debug\netcoreapp3.0\asynchronousVSsynchronous.runtimeconfig.dev.json
+C:\work\web Eng\ISD G\FullStrackNetVue\asynchronousVSsynchronous\bin\Debug\netcoreapp3.0\asynchronousVSsynchronous.dll
+C:\work\web Eng\ISD G\FullStrackNetVue\asynchronousVSsynchronous\bin\Debug\netcoreapp3.0\asynchronousVSsynchronous.pdb
+C:\work\web Eng\ISD G\FullStrackNetVue\asynchronousVSsynchronous\obj\Debug\netcoreapp3.0\asynchronousVSsynchronous.csprojAssemblyReference.cache
+C:\work\web Eng\ISD G\FullStrackNetVue\asynchronousVSsynchronous\obj\Debug\netcoreapp3.0\asynchronousVSsynchronous.AssemblyInfoInputs.cache
+C:\work\web Eng\ISD G\FullStrackNetVue\asynchronousVSsynchronous\obj\Debug\netcoreapp3.0\asynchronousVSsynchronous.AssemblyInfo.cs
+C:\work\web Eng\ISD G\FullStrackNetVue\asynchronousVSsynchronous\obj\Debug\netcoreapp3.0\asynchronousVSsynchronous.dll
+C:\work\web Eng\ISD G\FullStrackNetVue\asynchronousVSsynchronous\obj\Debug\netcoreapp3.0\asynchronousVSsynchronous.pdb

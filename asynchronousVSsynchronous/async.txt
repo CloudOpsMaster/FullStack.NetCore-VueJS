@@ -1,0 +1,1 @@
+sync/Await is a type of Promise. Promises in JavaScript are objects that can have multiple states (kind of like the real-life ones ☺️). Promises do this because sometimes what we ask for isn’t available immediately, and we’ll need to be able to detect what state it is in.
